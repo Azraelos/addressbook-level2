@@ -14,6 +14,8 @@ public class Name implements Printable {
     public static final String EXAMPLE = "John Doe";
     public static final String MESSAGE_NAME_CONSTRAINTS = "Person names should be spaces or alphabetic characters";
     public static final String NAME_VALIDATION_REGEX = "[\\p{Alpha} ]+";
+    public static final String NAME_PREFIX = "Name: ";
+    
     public final String fullName;
 
     /**
@@ -62,6 +64,6 @@ public class Name implements Printable {
 
     @Override
     public String getPrintableString(){
-    	return "Name: " + this.fullName;
+    	return NAME_PREFIX + this.fullName;
     }
 }
